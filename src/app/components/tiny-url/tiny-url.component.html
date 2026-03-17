@@ -1,0 +1,71 @@
+<div class="tiny-url-wrapper">
+  <h2 class="title">Tiny URL Generator</h2>
+
+  <!-- URL Input Form -->
+  <div class="url-form card">
+    <input
+      type="text"
+      [(ngModel)]="originalUrl"
+      placeholder="Enter your long URL"
+      [disabled]="loading"
+    />
+    <label class="checkbox">
+      <input type="checkbox" [(ngModel)]="isPrivate" /> Private
+    </label>
+    <button (click)="submitUrl()" [disabled]="loading">
+      {{ loading ? 'Processing...' : 'Generate Short URL' }}
+    </button>
+  </div>
+
+  <!-- Feedback -->
+  <div *ngIf="message" class="message">{{ message }}</div>
+
+  <!-- Short URL Display -->
+  <div *ngIf="shortUrl" class="short-url card">
+    <a [href]="shortUrl" target="_blank">{{ shortUrl }}</a>
+    <button (click)="copyToClipboard(shortUrl)">Copy</button>
+  </div>
+
+  <!-- Public URLs -->
+  <div class="public-urls">
+    <h3>Public URLs</h3>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Search URLs..."
+      class="search-input"
+    />
+
+    <div *ngFor="let url of publicUrls" class="url-card card">
+      <div class="url-info">
+        <a [href]="backendOrigin + '/' + url.shortCode" target="_blank">
+          {{ backendOrigin }}/{{ url.shortCode }}
+        </a>
+        <div class="original-url">{{ url.originalUrl }}</div>
+      </div>
+      <div class="url-actions">
+        <span class="clicks">{{ url.clicks || 0 }} clicks</span>
+        <button (click)="copyToClipboard(backendOrigin + '/' + url.shortCode)">Copy</button>
+        <button (click)="deleteUrl(url.shortCode)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Private URLs -->
+  <div *ngIf="privateUrls.length > 0" class="private-urls">
+    <h3>My Private URLs</h3>
+    <div *ngFor="let url of privateUrls" class="url-card card">
+      <div class="url-info">
+        <a [href]="backendOrigin + '/' + url.shortCode" target="_blank">
+          {{ backendOrigin }}/{{ url.shortCode }}
+        </a>
+        <div class="original-url">{{ url.originalUrl }}</div>
+      </div>
+      <div class="url-actions">
+        <span class="clicks">{{ url.clicks || 0 }} clicks</span>
+        <button (click)="copyToClipboard(backendOrigin + '/' + url.shortCode)">Copy</button>
+        <button (click)="deleteUrl(url.shortCode)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

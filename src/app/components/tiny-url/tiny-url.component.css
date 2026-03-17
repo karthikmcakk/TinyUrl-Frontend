@@ -1,0 +1,153 @@
+.tiny-url-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 15px;
+}
+
+.title {
+  text-align: center;
+  color: #6c3483;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.url-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.url-form input[type="text"] {
+  flex: 1 1 auto;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.url-form button {
+  background: linear-gradient(90deg, #ff3c89, #8e44ad);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.url-form button:hover {
+  transform: scale(1.05);
+}
+
+.message {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.short-url a {
+  color: #6c3483;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.short-url button {
+  background: #6c3483;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.public-urls h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.url-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.url-info {
+  flex: 1 1 60%;
+}
+
+.url-info a {
+  font-weight: 600;
+  color: #6c3483;
+  text-decoration: none;
+}
+
+.url-info a:hover {
+  text-decoration: underline;
+}
+
+.original-url {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+  word-break: break-word;
+}
+
+.url-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.url-actions .clicks {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.url-actions button {
+  background: #6c3483;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.url-actions button:hover {
+  background: #8e44ad;
+}
