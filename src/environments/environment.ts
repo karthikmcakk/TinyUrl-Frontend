@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://localhost:7106/api',  // backend for API calls
-  backendOrigin: 'https://localhost:7106' // backend for redirect links
+  apiUrl: 'https://tinyurl-bve8g3edh5gbhuc7.centralindia-01.azurewebsites.net/api',  // backend for API calls
+  backendOrigin: 'https://tinyurl-bve8g3edh5gbhuc7.centralindia-01.azurewebsites.net' // backend for redirect links
 };
